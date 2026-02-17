@@ -11,7 +11,7 @@ pipeline {
     steps {
      sh '''
        set -e
-       docker exec web1 wget -qO- http://localhost | host -n 5
+       docker exec web1 wget -qO- http://localhost | head -n 5
        echo "Smoke test passed"
      '''
     }
